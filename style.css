@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --yellow: #FCA311;
+    --black: #0C0C0C;
+    --off-white: #E5E5E5;
+    --white: #FFFFFF;
+    --blue: #14213D;
+    --h1-color: #7d51c5;
+    --violet: #53239f;
+    --shadow: rgba(149, 157, 165, 0.235) 0px 8px 24px;
+}
+
+html::-webkit-scrollbar{
+    width: 0.1rem;
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #171717;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--off-white);
+    border-radius: 10rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: var(--black);
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    padding: 40px 60px;
+    background-color: var(--white);
+}
+
+nav.shadow{
+    box-shadow: var(--shadow);
+    
+}
+
+nav a{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .3s;
+    text-align: center;
+}
+
+nav a:hover{
+    letter-spacing: 2px;
+    transition: all .3s;
+    font-weight: 600;
+    color: var(--h1-color);
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--second-color);
+    margin-bottom: 2rem;
+}
+
+.home-text h1{
+    font-size: 50px;
+    font-weight: 400;
+    padding: 80px 60px;
+}
+
+.home-text h1 span{
+    color: var(--h1-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.home-image img{
+    width: 540px;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.about .heading h1{
+    margin-top: 7rem;
+    text-align: center;
+    color: var(--h1-color);
+    font-size: 2.5rem;
+}
+
+.num2{
+    display: grid;
+    grid-template-columns: 750px 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.num2 p{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.num2 img{
+    width: 200px;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 10rem;
+}
+
+.serv-heading{
+    margin: auto;
+}
+
+.serv-heading h1{
+    font-size: 2.5rem;
+    color: var(--h1-color);
+    margin-top: 7rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.serv{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .3s;
+    border-radius: 16px;
+}
+
+.serv:hover{
+    transition: .3s;
+    transform: translateY(-14px);
+    box-shadow: var(--shadow);
+}
+
+.serv img{
+    max-width: 300px;
+}
+
+.serv h2{
+    font-weight: 400;
+    text-align: center;
+    padding: 30px;
+}
+
+#contact{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 70px;
+}
+
+.con-heading{
+    margin: auto;
+}
+
+.con-heading h1{
+    text-align: center;
+    color: var(--h1-color);
+    font-size: 2.5rem;
+}
+
+.message{
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    width: 470px;
+}
+
+.form input{
+    padding: 12px 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.message .client-message{
+   height: 140px;
+   text-align: start;
+}
+
+.button{
+    background-color: #7e51c5c3;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 2px;
+}
+
+.button:hover{
+    transition: .3s;
+    background-color: var(--violet);
+}
+
+.social-icons{
+    margin: auto;
+    text-align: center;
+}
+
+.social-icons i{
+    font-size: 24px;
+    padding: 7px 7px;
+    margin: 3px;
+    transition: .3s;
+    color: #7e51c5c3;
+}
+
+.message .social-icons i:hover{
+    color: var(--violet);
+    transition: .3s;
+}
+
+@media screen and (min-width: 2560px) {
+    nav{
+        gap: 8rem;
+        padding: 60px;
+    }
+
+    nav a{
+        font-size: 30px;
+    }
+
+    .home{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .home-text h1{
+        font-size: 6rem;
+    }
+
+    .home-image img{
+        width: 800px;
+    }
+
+    .about .heading h1{
+        margin-top: 11rem;
+        font-size: 4.5rem;
+    }
+
+    .num2{
+        grid-template-columns: 1200px 500px;
+    }
+
+    .num2 p{
+        font-size: 1.9rem;
+        padding: 10px;
+        word-spacing: 2px;
+        text-align: justify;
+    }
+
+    .num2 img{
+        width: 450px;
+    }
+
+    .services .serv-heading h1{
+        font-size: 4.5rem;
+        margin-top: 11rem;
+    }
+
+    .serv img{
+        max-width: 550px;
+    }
+
+    .serv h2{
+        font-size: 2rem;
+    }
+
+    .con-heading h1{
+        margin-top: 11rem;
+        font-size: 4.5rem;
+    }
+
+    .form{
+        width: 990px;
+    }
+
+    .form input{
+        border: 1px solid black;
+        width: 100%;
+        font-size: 30px;
+        padding: 12px 10px;
+    }
+
+    .message{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .message .client-message{
+        height: 340px;
+    }
+
+    .button{
+        font-size: 30px;
+    }
+
+    .social-icons i{
+        font-size: 3rem;
+    }
+
+    .social-icons a{
+        margin: 5px 15px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    nav{
+        gap: 6rem;
+        padding: 40px;
+    }
+
+    nav a{
+        font-size: 17px;
+    }
+
+    .home{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2.5rem;
+    }
+
+    .home-text{
+        margin-top: 60px;
+    }
+
+    .home-image{
+        margin-top: 60px;
+    }
+
+    .home-text h1{
+        font-size: 3.4rem;
+    }
+
+    .home-image img{
+        width: 500px;
+    }
+
+    .about .heading h1{
+        margin-top: 7rem;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .num2{
+        margin: 0 30px;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .num2 p{
+        font-size: 1.3rem;
+        padding: 8px;
+        word-spacing: 1px;
+        margin: 0 10px 0 15px;
+    }
+
+    .num2 img{
+        width: 270px;
+    }
+
+    .services .serv-heading h1{
+        font-size: 3rem;
+        margin-top: 7rem;
+    }
+
+    .serv{
+        max-width: max-content;
+    }
+
+    .serv img{
+        width: 300px;
+    }
+
+    .con-heading h1{
+        font-size: 3rem;
+        margin-top: 7rem;
+    }
+
+    .form{
+        width: 600px;
+    }
+
+    .form input{
+        font-size: 20px;
+    }
+
+    .message .client-message{
+        height: 200px;
+    }
+
+    .button{
+        font-size: 20px;
+        border: none;
+    }
+
+    .social-icons i{
+        font-size: 2.3rem;
+    }
+
+    .social-icons a{
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav{
+        gap: 3rem;
+        padding: 30px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+    
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+
+    .home-image img{
+        width: 360px;
+    }
+
+    .about{
+        margin: 0 50px;
+    }
+
+    .about .heading h1{
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+
+    .num2 p{
+        font-size: .9rem;
+        word-spacing: normal;
+    }
+
+    .num2 img{
+        width: 160px;
+    }
+
+    .services .serv-heading h1{
+        font-size: 2rem;
+        margin-top: 5.5rem;
+    }
+
+    .serv img{
+        width: 200px;
+    }
+
+    .serv h2{
+        font-size: 1.3rem;
+    }
+
+    .con-heading h1{
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+
+    .form{
+        width: 400px;
+    }
+
+    .form input{
+        font-size: 13px;
+    }
+
+    .message .client-message{
+        height: 160px;
+    }
+
+    .social-icons i{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        gap: 3.3rem;
+        padding: 20px;
+    }
+
+    nav a{
+        font-size: 13px;
+    }
+
+    .home-text h1{
+        font-size: 2rem;
+    }
+
+    .home-image img{
+        width: 300px;
+    }
+
+    .about{
+        margin: 0 30px;
+    }
+
+    .about .heading h1{
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .num2{
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .num2 p{
+        font-size: .74rem;
+    }
+
+    .num2 img{
+        width: 200px;
+    }
+
+    .services .serv-heading h1{
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .serv img{
+        width: 150px;
+    }
+
+    .serv h2{
+        font-size: 1.1rem;
+    }
+
+    .con-heading h1{
+        font-size: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .form{
+        width: 350px;
+    }
+
+    .form input{
+        font-size: 11px;
+        height: 30px;
+    }
+
+    .message .client-message{
+        height: 110px;
+    }
+
+    .social-icons i{
+        font-size: 1.4rem;
+    }
+
+    .social-icons a{
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 660px) {
+    nav{
+        gap: 3rem;
+    }
+
+    .home{
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 12%;
+    }
+
+    .home-text h1{
+        font-size: 2.5rem;
+        padding: 9rem 0 0 0;
+        text-align: center;
+    }
+
+    .home-image img{
+        margin-left: 32px;
+    }
+
+    .about h1{
+        margin-left: 30%;
+    }
+
+    .num2{
+        grid-template-columns: auto;
+        width: 500px;
+        margin-left: 15%;
+    }
+
+    .num2 img{
+        margin-left: 27%;
+    }
+
+    .services{
+        margin-left: 25%;
+    }
+
+    .cards{
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    .serv img{
+        width: 400px;
+    }
+
+    .con-heading{
+        margin-left: 46%;
+    }
+
+    .message{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+    .home{
+        display: grid;
+        grid-template-columns: auto;
+        margin-left: 27%;
+    }
+
+    .home-text h1{
+        font-size: 2.4rem;
+        padding: 9rem 0 0 0;
+        text-align: center;
+    }
+
+    .home-image img{
+        margin-left: 32px;
+    }
+
+    .about h1{
+        margin-left: 35%;
+    }
+
+    .num2{
+        grid-template-columns: auto;
+        width: 500px;
+        margin-left: 22%;
+    }
+
+    .num2 p{
+        font-size: 14px;
+    }
+
+    .num2 img{
+        margin-left: 27%;
+    }
+
+    .services{
+        margin-left: 27%;
+    }
+
+    .cards{
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    .serv img{
+        width: 500px;
+    }
+
+    .contact{
+        margin-top: 4rem;
+    }
+
+    .con-heading{
+        margin-left: 46%;
+    }
+
+    .con-heading h1{
+        margin-top: -2rem;
+    }
+
+    .message{
+        margin-left: 20%;
+    }
+}

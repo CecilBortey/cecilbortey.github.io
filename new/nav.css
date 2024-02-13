@@ -54,6 +54,7 @@ nav a{
     backdrop-filter: blur();
     display: none;
     transition: all .3s;
+    font-size: 17px;
 }
 
 .logo{

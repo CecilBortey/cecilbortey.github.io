@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css codes/nav.css">
+    <link rel="stylesheet" href="fonts-6/css/all.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <i class="fa fa-close"></i>
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">About Us</a>
+        <a href="#" class="link">New Arrivals</a>
+        <a href="#" class="link">Reviews</a>
+    </nav>
+    <nav class="navbar">
+        <a href="#"><h1>Shopify</h1></a>
+        <a href="#" class="link">Home</a>
+        <a href="#" class="link">About Us</a>
+        <a href="#" class="link">New Arrivals</a>
+        <a href="#" class="link">Reviews</a>
+        <i class="fa fa-bars"></i>
+    </nav>
+
+    <script>
+        const sidebarbtn = document.querySelector('.fa-bars');
+        const sidebar = document.querySelector('.sidebar');
+
+        sidebarbtn.onclick = () =>{
+            sidebar.style.display = 'flex'
+        }
+
+        const closebtn = document.querySelector('.fa-close');
+
+        closebtn.onclick = () =>{
+            sidebar.style.display = 'none'
+        }
+
+        window.onscroll = () =>{
+            sidebar.classList.remove('sidebar')
+        }
+    </script>
+</body>
+</html>

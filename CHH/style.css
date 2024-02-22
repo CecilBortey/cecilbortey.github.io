@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+    width: .7em;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --orange: #ff8c00;
+    --2nd-orange: rgb(132, 73, 0);
+    --green: #085049;
+    --light-green: #085049cc;
+    --2nd-green: #4D8A42;
+    --off-white: #c4c8ccbe;
+    --off-white2: #f9f9f9;
+    --pink: #D92740;
+    --shadow: rgba(0, 0, 0, 0.21) 0px 7px 29px 0px;
+    --box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo img{
+    width: 65px;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
+
+.desktop-nav .navlist{
+    display: none;
+}
+
+.home{
+    height: 100svh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.623), rgba(255, 255, 255, 0.765)), url(images/homeimage1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.home h1{
+    font-size: 1.6rem;
+    color: var(--green);
+    font-family: 'Sora', sans-serif;
+    text-transform: capitalize;
+    line-height: 30px;
+    letter-spacing: -1px;
+    padding: 12px;
+    padding-bottom: 0;
+    padding-top: 40svh;
+}
+
+.buttons{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    margin: 40% 12px;
+}
+
+.buttons a{
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1.5px solid var(--green);
+    font-size: 12px;
+    padding: 10px;
+    /* transition: .3s; */
+    /* width: 60%; */
+    text-align: center;
+}
+
+.buttons a:hover{
+    background-color: var(--green);
+    color: var(--off-white2);
+    transition: .3s;
+}
+
+.card img{
+    width: 150px;
+    margin: auto;
+}
+
+.optional .card{
+    background-color: var(--green);
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.optional .card .card-text{
+    text-align: center;
+    color: var(--off-white2);
+}
+
+.optional .card .card-text p{
+    text-align: start;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.additive{
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.additive .text a{
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1.5px solid var(--green);
+    font-size: 12px;
+    padding: 10px;
+    transition: .3s;
+    text-align: center;
+}
+
+.additive .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.additive .text a:hover{
+    color: white;
+    background-color: var(--green);
+}
+
+.additive .picture img{
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+.additive .text h2{
+    color: var(--green);
+    text-align: center;
+}
+
+.additive .text p{
+    text-align: center;
+    color: var(--green);
+    padding-bottom: 20px;
+}
+
+.about{
+    padding: 15px 10px;
+}
+
+.about h1{
+    color: var(--green);
+    text-align: center;
+}
+
+.about p{
+    color: var(--green);
+    padding-bottom: 18px;
+}
+
+.about p a{
+    background-color: var(--green);
+    color: var(--off-white2);
+}
+
+.about h2{
+    text-align: center;
+    color: var(--green);
+}
+
+.about h2 span{
+    font-weight: 400;
+}
+
+.any-image{
+    margin-top: 20px;
+    flex-direction: column-reverse;
+}
+
+.gallery{
+    margin-top: 20px;
+}
+
+.gallery h1{
+    color: var(--green);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.igcard img{
+    width: 140px;
+}
+
+footer{
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    margin-top: 40px;
+}
+
+footer .items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer img{
+    padding: 10px;
+    border-radius: 10px;
+    width: 50px;
+    margin-top: 100px;
+}
+
+footer h1{
+    color: var(--green);
+    font-size: 18px;
+    margin: 15px 0 0 0;
+}
+
+footer h3{
+    color: var(--green);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+footer p{
+    color: var(--green);
+}
+
+.icons{
+    margin: 5px;
+}
+
+.icons i{
+    color: var(--green);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.icons i:hover{
+    color: white;
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+footer a{
+    color: var(--green);
+    font-size: 12px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.contact{
+    margin-top: 14%;
+}
+
+.contact img{
+    width: 100%;
+    margin-top: 24%;
+}
+
+.chead{
+    color: white;
+    padding: 20px 8px;
+    background-color: var(--green);
+}
+
+.chead h1{
+    color: white;
+}
+
+.header{
+    color: var(--green);
+    font-size: 20px;
+    padding: 20px 10px;
+}
+
+.details{
+    margin: 20px 10px;
+    color: var(--green);
+}
+
+.contact-container h3{
+    padding: 10px 0;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px 70px 10px 0;
+}
+
+.inputs input{
+    margin: 12px 0;
+    height: 50px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+    outline: none;
+}
+
+.inputs textarea{
+    margin: 12px 0;
+    max-width: 400px;
+    outline: none;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.page{
+    margin-top: 24%;
+}
+
+.page img{
+    width: 100%;
+}
+
+.page p{
+    padding: 20px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.form .logo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.logo2 img{
+    width: 60px;
+}
+
+.logo2 h3{
+    color: var(--green);
+}
+
+.vol-details{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.vol-details .name{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 20px;
+}
+
+.vol-details .name input{
+    height: 40px;
+    outline: none;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.vol-details .address{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 20px;
+}
+
+.vol-details .address input{
+    height: 40px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+    outline: none;
+}
+
+.vol-details .country{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 20px;
+}
+
+.vol-details .country input{
+    height: 40px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 8px 0;
+    outline: none;
+}
+
+.vol-details .phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vol-details .phone input{
+    margin: 0 8px;
+    height: 40px;
+    width: 215px;
+    padding: 8px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.explain{
+    display: grid;
+    margin: 20px;
+}
+
+.explain textarea{
+    min-height: 90px;
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    max-width: 440px;
+    text-align: start;
+}
+
+.bck-check{
+    display: grid;
+    margin-bottom: 20px;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.radios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+hr{
+    width: 410px;
+    margin: auto;
+    height: 1px;
+    background-color: var(--green);
+}
+
+.gender{
+    margin: auto;
+    margin-top: 20px;
+}
+
+.gender p{
+    margin-left: 40px;
+}
+
+#submitbtn{
+    margin: 30px 50px;
+    background-color: transparent;
+    border: 1.5px solid var(--green);
+    padding: 10px;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#submitbtn:hover{
+    color: white;
+    background-color: var(--green);
+}
